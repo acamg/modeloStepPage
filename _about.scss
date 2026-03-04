@@ -1,0 +1,103 @@
+.about {
+  padding-top: 10rem;
+  min-height: 100vh;
+  color: #fff;
+
+  h1 {
+    font-size: 3.6rem;
+    font-weight: bold;
+  }
+  .p-sub {
+    display: flex;
+    align-items: center;
+    font-size: 3.6rem;
+    font-weight: lighter;
+    margin-bottom: 2rem;
+  }
+
+  @include device("s") {
+    .p-sub img {
+      display: none;
+    }
+  }
+}
+
+.title-about {
+  height: 10rem;
+  margin-bottom: 10rem;
+
+  .about-p {
+    max-width: 60rem;
+    text-align: justify;
+  }
+
+  @include device("s") {
+    margin-bottom: 4rem;
+  }
+}
+
+.info-boy {
+  max-width: 50rem;
+  z-index: 1000;
+  .boy {
+    border-radius: 131px 49px 169px 41px;
+    -moz-border-radius: 131px 49px 169px 41px;
+    -webkit-border-radius: 131px 49px 169px 41px;
+    border: 0px solid #000000;
+    margin-top: 5rem;
+    width: 100%;
+    @include device("s") {
+      width: 90vw;
+    }
+  }
+  @include device("l") {
+    margin-right: 8rem;
+  }
+
+  @include device("m") {
+    padding-left: 2rem;
+  }
+}
+
+.about-hydra {
+  z-index: 1000;
+  h1 {
+    margin-top: 15rem;
+  }
+
+  p {
+    padding-top: 1rem;
+    max-width: 60rem;
+    text-align: justify;
+  }
+
+  button {
+    margin-top: 2.5rem;
+    width: 21.4rem;
+    height: 4.8rem;
+  }
+
+  @include device("m") {
+    padding-left: 2rem;
+
+    h1 {
+    margin-top: 0rem;
+  }
+  }
+}
+
+.line-h {
+  position: absolute;
+  right: 0;
+  bottom: 15rem;
+  z-index: -1;
+  transform: scaleX(-1);
+}
+
+.line2-h {
+  position: absolute;
+  right: 0;
+  bottom: 20rem;
+  z-index: -1;
+  transform: scaleX(-1);
+}

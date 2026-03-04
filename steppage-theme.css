@@ -1,0 +1,236 @@
+/* ============================================
+   STEPPAGE THEME OVERRIDE FOR HYDRA
+   Aplica cores, fontes e elementos do StepPage
+   sem modificar a estrutura original do Hydra
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* --- Variáveis do StepPage --- */
+:root {
+  --bg-dark: #0d1117;
+  --bg-light: #161b22;
+  --border-color: #30363d;
+  --text: #c9d1d9;
+  --text-muted: #8b949e;
+  --accent: #2f81f7;
+  --accent-2: #7c3aed;
+  --radius: 14px;
+}
+
+/* --- Reset de fonte e fundo --- */
+* {
+  font-family: 'Inter', sans-serif !important;
+}
+
+body {
+  background: radial-gradient(circle at top, #1f2933, var(--bg-dark)) !important;
+  background-color: var(--bg-dark) !important;
+  color: var(--text) !important;
+}
+
+/* --- Scrollbar StepPage style --- */
+body::-webkit-scrollbar { width: 8px; }
+body::-webkit-scrollbar-track { background: var(--bg-dark); }
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--accent), var(--accent-2));
+  border-radius: 20px;
+  border: none;
+}
+
+/* --- HEADER --- */
+.header {
+  background: rgba(13, 17, 23, 0.85) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-link p {
+  color: var(--text-muted) !important;
+  font-weight: 500 !important;
+  transition: color 0.2s;
+}
+
+.nav-link p:hover {
+  color: var(--text) !important;
+}
+
+/* --- BOTÕES --- */
+.button {
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+  color: #fff !important;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2)) !important;
+  border: none !important;
+  box-shadow: 0 8px 28px rgba(47, 129, 247, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.button:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 14px 40px rgba(47, 129, 247, 0.5) !important;
+}
+
+.btn-contact {
+  background: transparent !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text) !important;
+  box-shadow: none !important;
+}
+
+.btn-contact:hover {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+  background: rgba(47, 129, 247, 0.08) !important;
+}
+
+/* --- TÍTULO HERO --- */
+.title {
+  color: var(--text) !important;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.title span {
+  background-image: linear-gradient(135deg, var(--accent), var(--accent-2)) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+}
+
+.info-title {
+  color: var(--text-muted) !important;
+}
+
+/* --- INFO BANNER --- */
+.info-banner {
+  background: linear-gradient(135deg, var(--bg-light), rgba(47, 129, 247, 0.05)) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+.info-banner h2 { color: var(--text) !important; }
+.info-banner p { color: var(--text-muted) !important; }
+
+.location::after,
+.contact::after {
+  border-right-color: var(--border-color) !important;
+}
+
+/* --- SEÇÃO ABOUT --- */
+.about { color: var(--text) !important; }
+.about h1 { color: var(--text) !important; }
+.about .p-sub { color: var(--text-muted) !important; }
+.about-p { color: var(--text-muted) !important; line-height: 1.7; }
+.about-hydra p { color: var(--text-muted) !important; line-height: 1.7; }
+
+.info-boy .boy {
+  border-color: rgba(47, 129, 247, 0.25) !important;
+  box-shadow: 0 20px 60px rgba(47, 129, 247, 0.1);
+}
+
+.girl img {
+  border-color: rgba(47, 129, 247, 0.12) !important;
+  box-shadow: 0 20px 60px rgba(47, 129, 247, 0.15);
+}
+
+/* --- CARDS HOW WE BUILD --- */
+.card h1 { color: var(--text) !important; }
+.card .p { color: var(--text-muted) !important; }
+
+.card-item {
+  background: linear-gradient(180deg, var(--bg-light), rgba(47, 129, 247, 0.04)) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius) !important;
+  color: var(--text) !important;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: stepReveal 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.card-item:nth-child(2) { animation-delay: 0.1s; }
+.card-item:nth-child(3) { animation-delay: 0.2s; }
+.card-item:nth-child(4) { animation-delay: 0.3s; }
+.card-item:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes stepReveal {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card-item:hover {
+  transform: translateY(-8px) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 20px 50px rgba(47, 129, 247, 0.15) !important;
+}
+
+.card-item img {
+  border-color: rgba(47, 129, 247, 0.15) !important;
+}
+
+.card-item h2 {
+  color: var(--text) !important;
+  border-bottom-color: var(--border-color) !important;
+}
+
+.card-item p { color: var(--text-muted) !important; }
+
+/* --- TECHNOLOGIES --- */
+.technologies {
+  background: linear-gradient(135deg, var(--bg-light), rgba(124, 58, 237, 0.05)) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius) !important;
+  color: var(--text) !important;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.3);
+}
+
+.technologies h1 { color: var(--text) !important; }
+.technologies p { color: var(--text-muted) !important; }
+
+/* --- FOOTER --- */
+.footer {
+  background: var(--bg-light) !important;
+  background-image: none !important;
+  border-top: 1px solid var(--border-color) !important;
+}
+
+.footer-logo p { color: var(--text-muted) !important; }
+
+/* --- LINHAS DECORATIVAS: tom azul frio --- */
+.lineLeft, .line-1, .line-3, .line-h, .line2-h {
+  filter: hue-rotate(200deg) saturate(0.5) brightness(0.6) !important;
+  opacity: 0.35;
+}
+
+/* --- Glow sutil no hero --- */
+.dashboard::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(47, 129, 247, 0.06), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* --- Glow accent-2 no about --- */
+.about {
+  position: relative;
+}
+
+.about::after {
+  content: '';
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.05), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}

@@ -1,0 +1,99 @@
+.card {
+  margin-top: 10rem;
+
+  h1 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 3.6rem;
+  }
+
+  .p {
+    color: #fff;
+    font-size: 3.6rem;
+    margin-bottom: 5rem;
+  }
+}
+
+
+
+.card-item {
+  text-align: center;
+  background: linear-gradient(to right, #342f49, #3a3456);
+  min-height: 510px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  border-radius: 40px;
+  padding: 0 20px;
+  margin-top: 5rem;
+  img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 1rem solid #0e0e0e34;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    width: 16rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #fff;
+  }
+
+  p {
+    text-align: justify;
+    max-width: 250px;
+    margin-top: 2.2rem;
+  }
+}
+
+.content-tech {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+
+.technologies {
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: center;
+  background-color: #342f49;
+  border-radius: 50rem;
+  height: 30rem;
+  padding: 1.5rem 0;
+
+  @include device("s") {
+    height: 100%;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    margin-top: 5rem;
+    font-weight: bold;
+  }
+  p {
+    font-weight: lighter;
+    margin-bottom: 1rem;
+  }
+}
+
+.tech {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  img {
+    width: 100px;
+    height: 100px;
+  }
+  @include device("s") {
+    flex-direction: column;
+    img {
+      margin-top: 2rem;
+    }
+  }
+}
